@@ -1,1 +1,15 @@
-
+# Które z następujących zadań wymagają w Twojej opinii inteligencji od człowieka:
+- wypełnianie deklaracji PIT - jeśli mamy do tego odpowiednie narzędzie, to od użytkownika wymagane jest jedynie zaznaczenie odpowiednich opcji i wypełnienie danych, więc nie jest potrzebna inteligencja.
+- streszczanie tekstu - wymaga inteligencji, ponieważ wymagane jest ogólne zrozumienie przekazu tekstu
+- tłumaczenie tekstu - wymaga inteligencji, ponieważ wymagane jest wyłapywanie kontekstu zdań oraz związków wyrazowych, których nie da się przetłumaczyć jeden do jednego między językami. 
+- klasyfikacja tekstu do kategorii tematycznych - wymaga inteligencji, ponieważ podobnie jak streszczanie tekstu wymaga zrozumienia ogólnego przekazu tekstu
+- odpowiadanie na proste pytania zadawane w języku naturalnym (np. polskim) - wymagana jest inteligencja, bo nie można wcześniej mieć gotowej odpowiedzi na każde pytanie. 
+- układanie rozkładu jazdy transportu miejskiego - jeśli nie mamy odpowiedniego narzędzia, które zrobi to za nas jednym kliknięciem, to  wymagana jest inteligencja
+- programowanie (pisanie programów komputerowych) - poza najprostszymi programami które w całości można przekopiować z internetu (nie wymaga to inteligencji od programisty) wymaga to od programisty inteligencji
+- „programowanie” kanałów telewizyjnych - nie wymaga inteligencji, wystarczy przeczytać instrukcję telewizora aby wiedzieć, co kliknąć aby zrobiło się to automatycznie
+- testowanie oprogramowania - wymaga inteligencji, bo trzeba rozważyć różne przypadki tego, jak nasz program może się zachować
+- komponowanie muzyki - tworzenie czegoś oryginalnego wymaga inteligencji
+- rozwiązywanie układów równań - nie wymaga inteligencji, rozwiązywanie układów równań przebiega tak samo i jest do wykonania schematem 
+- symboliczne obliczanie pochodnych funkcji - nie wymaga inteligencji, obliczanie pochodnej to podstawienie danych do konkretnego wzoru 
+- symboliczne całkowanie funkcji - wymaga inteligencji, ponieważ w przypadku bardziej skomplikowanych całek nie można po prostu podstawić do wzoru, trzeba wykazać się inteligencją
+- kierowanie samochodem - wymaga inteligencji - reagowanie na otoczenie, dostosowywanie jazdy do warunków panujących na drodze itd.
