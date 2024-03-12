@@ -1,0 +1,11 @@
+Które z następujących problemów można uznać za mieszczące się w zakresie sztucznej inteligencji:
+- streszczanie tekstu - tak (gpt)
+- tłumaczenie tekstu - tak (google translate)
+- klasyfikacja tekstu do kategorii tematycznych - tak (gpt)
+- odpowiadanie na proste pytania zadawane w języku naturalnym - tak (cleverbot)
+- rozwiązywanie układów równań - tak (wolfram alpha)
+- układanie rozkładu jazdy - tak, główna trudność polega na tym, aby poszczególne rozkłady ze sobą nie kolidowały, a sztuczna inteligencja z dostępem do informacji jest w stanie to zrobić nawet szybciej od człowieka
+- rozwiązywanie układów równań liniowych - tak (wolfram alpha)
+- symboliczne obliczanie pochodnych - tak (wolfram alpha)
+- symboliczne całkowanie - tak (wolfram alpha)
+- kierowanie samochodem - tak (samochody tesli)
