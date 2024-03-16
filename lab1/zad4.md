@@ -91,6 +91,13 @@ empik, od razu zapomina wcześniejszą rozmowę
 
 W zadaniu 2 załączyłem screeny albo informacje o przebiegu konkretnych podpunktów na podstawie rozmów z chatgpt i asystentem empiku. ChatGPT dobrze poradził sobie z większością z podanych podpunktów. Czasami odpowiadał dosyć ogólnikowo, ale jeśli zaczniemy drążyć temat to odpowie na to pytanie w taki sposób, jak tego oczekujemy. W przypadku asystenta empiku od razu zdajemy sobie sprawę z tego, że nie piszemy z człowiekiem. Odpowiada tylko na ograniczoną pulę pytań dotyczącą działania serwisu, wiadomości są schematyczne, a w przypadku, gdy pytanie wydaje się zbyt "trudne" aby na nie odpowiedzieć próbuje nas przekierować do ludzkiego konsultanta.
 ## 4. Na podstawie powyższych obserwacji, w grupie dwóch osób spróbujcie przewidzieć zachowania dwóch rozmawiających ze sobą chatbotów (przepisując ich wzajemne odpowiedzi).
+
+rozmowa cleverbota z chatgpt - tak jak widać, nie ma za bardzo sensu.
+
+![obraz](https://github.com/Matthes0/WSSI/assets/78498371/55567eb7-48db-4b0d-94e7-764f0252cf50)
+
+![obraz](https://github.com/Matthes0/WSSI/assets/78498371/a5f377b2-3ec4-4b74-b666-28caad4866b6)
+
 ## 5. Zdenerwuj bota 😊😊
 chatgpt, nie udało się mimo tego, że zrozumiał o co mi chodzi
 
