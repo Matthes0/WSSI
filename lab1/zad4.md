@@ -23,24 +23,83 @@ empik, nie udało się
 ![obraz](https://github.com/Matthes0/WSSI/assets/78498371/a2f84574-3c5b-4914-93d3-c0aa1a53c1d0)
 
 ### c) nawiązywanie wypowiedzi do słów kluczowych
-chatgpt, udało się
+chatgpt, częściowo udało się
 
+![obraz](https://github.com/Matthes0/WSSI/assets/78498371/3d119ee0-564e-4b99-83a9-c01e59fd3ced)
 
-udało się
+empik, udało się
+
+![obraz](https://github.com/Matthes0/WSSI/assets/78498371/52af7540-66cf-4794-b464-559e7d581156)
+
 ### d) zadawanie dużej liczby pytań
+
 chatgpt, udało się
 
-![obraz](https://github.com/Matthes0/WSSI/assets/78498371/9c71a34d-5b8f-4439-8c60-ea6b6a2d81fd)
+![obraz](https://github.com/Matthes0/WSSI/assets/78498371/4ca4e258-57e8-4cae-8fef-d9ece1186b7c)
 
-empik, nie udało się 
+empik, zawsze pojedyncze pytanie  
 
-![obraz](https://github.com/Matthes0/WSSI/assets/78498371/b9dfa1fd-8e91-49fa-8083-a42b1fdd1cdb)
+![obraz](https://github.com/Matthes0/WSSI/assets/78498371/24b9b020-47cd-4cac-86ee-c6b212e6c537)
+
 
 ### e) powracanie do początku wypowiedzi, sekwencyjne powtarzanie
+chatgpt, udało się, powtarzanie "czy masz jeszcze jakieś pytania?"
+
+![obraz](https://github.com/Matthes0/WSSI/assets/78498371/b95f14f7-4655-4f4d-9653-ef5b4c4079f9)
+
+empik, udało się, powtarzanie tego na koniec każdej odpowiedzi
+
+![obraz](https://github.com/Matthes0/WSSI/assets/78498371/f6fbdd75-7d96-463b-a0a4-63a3a0ba9a40)
+
+
 ### f) zadawanie pytań powstających z twoich wypowiedzi
+chatgpt, udało się 
+
+![obraz](https://github.com/Matthes0/WSSI/assets/78498371/383f2531-ed62-4c60-8c92-61009ddbdf6c)
+
+empik, nie udało się, zawsze ta samo pytanie
+
+![obraz](https://github.com/Matthes0/WSSI/assets/78498371/0a71f1db-4331-4aaa-aae1-617d34f493a9)
+
+
+
 ### g) odpowiadanie wymijająco, ogólnikowo
+
+chatgpt, prosi o bardziej szczegółowe pytania 
+
+![obraz](https://github.com/Matthes0/WSSI/assets/78498371/5f834ae1-1bfd-4790-b5dc-63539ec7bcf5)
+
+
+empik, wiadomość gdy nie może łatwo odpowiedzieć na pytanie
+
+![obraz](https://github.com/Matthes0/WSSI/assets/78498371/1596334f-66af-435c-b8fa-41b9e7119a23)
+
+
 ### h) częsta zmiana tematu rozmowy
+
+chatgpt, zmieni temat rozmowy dopiero wtedy, kiedy my tego chcemy.
+
+empik, co wiadomość zmienia temat rozmowy
+
 ### i) problemy z utrzymaniem wątków
+
+chatgpt, dobrze utrzymuje wątki, pamięta obecną rozmowę
+
+empik, od razu zapomina wcześniejszą rozmowę
+
 ## 3. Sporządź raport ze spostrzeżeń
+
+W zadaniu 2 załączyłem screeny albo informacje o przebiegu konkretnych podpunktów na podstawie rozmów z chatgpt i asystentem empiku. ChatGPT dobrze poradził sobie z większością z podanych podpunktów. Czasami odpowiadał dosyć ogólnikowo, ale jeśli zaczniemy drążyć temat to odpowie na to pytanie w taki sposób, jak tego oczekujemy. W przypadku asystenta empiku od razu zdajemy sobie sprawę z tego, że nie piszemy z człowiekiem. Odpowiada tylko na ograniczoną pulę pytań dotyczącą działania serwisu, wiadomości są schematyczne, a w przypadku, gdy pytanie wydaje się zbyt "trudne" aby na nie odpowiedzieć próbuje nas przekierować do ludzkiego konsultanta.
 ## 4. Na podstawie powyższych obserwacji, w grupie dwóch osób spróbujcie przewidzieć zachowania dwóch rozmawiających ze sobą chatbotów (przepisując ich wzajemne odpowiedzi).
 ## 5. Zdenerwuj bota 😊😊
+chatgpt, nie udało się mimo tego, że zrozumiał o co mi chodzi
+
+![obraz](https://github.com/Matthes0/WSSI/assets/78498371/fbc1f44d-25ea-4b84-9467-6a14ac92e08e)
+
+empik, nie udało się
+
+![obraz](https://github.com/Matthes0/WSSI/assets/78498371/86813872-f578-4e0a-a0de-f6ba89581840)
+
+
+
+
