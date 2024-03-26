@@ -5,4 +5,4 @@
 - D - y jest rodzicem potomka, którego drugi rodzic jest rodzicem x
 - E - x i y mają jednego tego samego rodzica, a drugi rodzic każdego z nich jest inny
 - F - rodzic y'a jest rodzicem potomka który jest rodzicem potomka, którego drugim rodzicem jest x
-- G - jeden rodzic x'a jest rodzicem y'a, a potomek drugiego rodzica x'a jest rodzicem 
+- G - jeden rodzic x'a jest rodzicem y'a, a potomek drugiego rodzica x'a jest rodzicem y'a
