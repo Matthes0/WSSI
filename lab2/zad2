@@ -1,0 +1,42 @@
+mężczyzna(X).
+rodzic(X, Y). % x jest rodzicem y
+
+kobieta(X) :-
+    \+mężczyzna(X).
+ojciec(X,Y) :-
+    mężczyzna(X),
+    rodzic(X, Y).
+matka(X, Y) :-
+    kobieta(X),
+    rodzic(X, Y).
+corka(X, Y) :- % x jest corka y
+    kobieta(X),
+    rodzic(Y, X).
+brat_rodzony(X, Y) :-
+    mężczyzna(X),
+    ojciec(Ojciec, X),
+    ojciec(Ojciec, Y),
+    matka(Matka, X),
+    matka(Matka, Y).
+brat_przyrodni(X, Y) :-
+    mężczyzna(X),
+    (((ojciec(Ojciec, X), ojciec(Ojciec, Y)),(matka(Matka1, X),matka(Matka2,Y), Matka1 \= Matka2)); 
+    ((matka(Matka, X), matka(Matka, Y)),(ojciec(Ojciec1, X),ojciec(Ojciec2,Y), Ojciec1 \= Ojciec2))).
+kuzyn(X, Y) :-
+    mężczyzna(X). %do dokonczenia
+dziadek_od_strony_ojca(X, Y) :-
+    ojciec(X, Ojciec),
+    ojciec(Ojciec, Y).
+dziadek_od_strony_matki(X, Y) :-
+    ojciec(X, Matka),
+    matka(Matka, Y).
+dziadek(X, Y) :-
+    ojciec(X, Rodzic),
+    rodzic(Rodzic, Y).
+babcia(X, Y) :-
+    matka(X, Rodzic),
+    rodzic(Rodzic, Y).
+wnuczka(X, Y) :-
+    kobieta(Y),
+    (dziadek(X,Y);babcia(X,Y)).
+% przodek_do2pokolenia_wstecz(X, Y)
