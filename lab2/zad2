@@ -1,5 +1,29 @@
-mężczyzna(X).
-rodzic(X, Y). % x jest rodzicem y
+rodzic(Aniela, Józef).
+rodzic(Aniela, Janina).
+rodzic(Stefan, Józef).
+rodzic(Stefan, Janina).
+rodzic(Anna, Adam).
+rodzic(Tadeusz, Adam).
+rodzic(Janina, Kasia).
+rodzic(Janina, Kacper).
+rodzic(Adam, Kasia).
+rodzic(Adam, Kacper).
+rodzic(Kasia, Ola).
+rodzic(Kasia, Janek).
+rodzic(Mateusz, Ola).
+rodzic(Mateusz, Janek).
+rodzic(Amelia, Tomek).
+rodzic(Kacper, Tomek).
+mężczyzna(Stefan).
+mężczyzna(Józef).
+mężczyzna(Tadeusz).
+mężczyzna(Adam).
+mężczyzna(Kamil).
+mężczyzna(Mateusz).
+mężczyzna(Kacper).
+mężczyzna(Janek).
+mężczyzna(Tomek).
+
 
 kobieta(X) :-
     \+mężczyzna(X).
@@ -9,7 +33,7 @@ ojciec(X,Y) :-
 matka(X, Y) :-
     kobieta(X),
     rodzic(X, Y).
-corka(X, Y) :- % x jest corka y
+corka(X, Y) :- 
     kobieta(X),
     rodzic(Y, X).
 brat_rodzony(X, Y) :-
@@ -23,7 +47,11 @@ brat_przyrodni(X, Y) :-
     (((ojciec(Ojciec, X), ojciec(Ojciec, Y)),(matka(Matka1, X),matka(Matka2,Y), Matka1 \= Matka2)); 
     ((matka(Matka, X), matka(Matka, Y)),(ojciec(Ojciec1, X),ojciec(Ojciec2,Y), Ojciec1 \= Ojciec2))).
 kuzyn(X, Y) :-
-    mężczyzna(X). %do dokonczenia
+    mężczyzna(X),
+    rodzic(Rodzic1, X),
+    rodzic(Wspolny, Rodzic1),
+    rodzic(Wspolny, Rodzic2),
+    rodzic(Rodzic2, Y).
 dziadek_od_strony_ojca(X, Y) :-
     ojciec(X, Ojciec),
     ojciec(Ojciec, Y).
@@ -39,4 +67,16 @@ babcia(X, Y) :-
 wnuczka(X, Y) :-
     kobieta(Y),
     (dziadek(X,Y);babcia(X,Y)).
-% przodek_do2pokolenia_wstecz(X, Y)
+przodek_do2pokolenia_wstecz(X, Y) :-
+    rodzic(Y, X);
+    dziadek(Y, X);
+    babcia(Y, X).
+przodek_do3pokolenia_wstecz(X, Y) :-
+    rodzic(Y, X);
+    dziadek(Y, X);
+    babcia(Y, X);
+    (dziadek(Dziadek, X),rodzic(Y,Dziadek));
+    (babcia(Babcia, X),rodzic(Y,Babcia)).
+
+
+    
