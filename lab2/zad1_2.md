@@ -13,19 +13,19 @@ B(X, Y) :-
     
 
 C(X, Y) :-
-	rodzic(Wspolny, Rodzic1),
+    rodzic(Wspolny, Rodzic1),
     rodzic(Wspolny, Rodzic2),
     rodzic(Rodzic1, X),
     rodzic(Rodzic2, Y).
 
 D(X, Y) :-
-	rodzic(Potomek1, Y),
+    rodzic(Potomek1, Y),
     rodzic(Potomek1, Rodzic1),
     rodzic(X, Rodzic1),
     \+rodzic(X, Y).
 
 E(X, Y) :-
-	rodzic(X, Rodzic1),
+    rodzic(X, Rodzic1),
     rodzic(X, Wspolny),
     rodzic(Y, Rodzic2),
     rodzic(Y, Wspolny),
