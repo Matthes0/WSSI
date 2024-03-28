@@ -1,82 +1,97 @@
-rodzic(Aniela, Józef).
-rodzic(Aniela, Janina).
-rodzic(Stefan, Józef).
-rodzic(Stefan, Janina).
-rodzic(Anna, Adam).
-rodzic(Tadeusz, Adam).
-rodzic(Janina, Kasia).
-rodzic(Janina, Kacper).
-rodzic(Adam, Kasia).
-rodzic(Adam, Kacper).
-rodzic(Kasia, Ola).
-rodzic(Kasia, Janek).
-rodzic(Mateusz, Ola).
-rodzic(Mateusz, Janek).
-rodzic(Amelia, Tomek).
-rodzic(Kacper, Tomek).
-mężczyzna(Stefan).
-mężczyzna(Józef).
-mężczyzna(Tadeusz).
-mężczyzna(Adam).
-mężczyzna(Kamil).
-mężczyzna(Mateusz).
-mężczyzna(Kacper).
-mężczyzna(Janek).
-mężczyzna(Tomek).
-
+rodzic(aniela, józef).
+rodzic(aniela, janina).
+rodzic(stefan, józef).
+rodzic(stefan, janina).
+rodzic(anna, adam).
+rodzic(tadeusz, adam).
+rodzic(janina, kasia).
+rodzic(janina, kacper).
+rodzic(adam, kasia).
+rodzic(adam, kacper).
+rodzic(kasia, ola).
+rodzic(kasia, janek).
+rodzic(mateusz, ola).
+rodzic(mateusz, janek).
+rodzic(amelia, tomek).
+rodzic(kacper, tomek).
+rodzic(kasia, darek).
+rodzic(arek, darek).
+mężczyzna(stefan).
+mężczyzna(józef).
+mężczyzna(tadeusz).
+mężczyzna(adam).
+mężczyzna(kamil).
+mężczyzna(mateusz).
+mężczyzna(kacper).
+mężczyzna(janek).
+mężczyzna(tomek).
+mężczyzna(arek).
+mężczyzna(darek).
 
 kobieta(X) :-
     \+mężczyzna(X).
 ojciec(X,Y) :-
     mężczyzna(X),
-    rodzic(X, Y).
+    rodzic(X, Y),
+    X \= Y.
 matka(X, Y) :-
+    rodzic(X, Y),
     kobieta(X),
-    rodzic(X, Y).
+    X \= Y.
 corka(X, Y) :- 
+    rodzic(Y, X),
     kobieta(X),
-    rodzic(Y, X).
+    X \= Y.
 brat_rodzony(X, Y) :-
-    mężczyzna(X),
-    ojciec(Ojciec, X),
-    ojciec(Ojciec, Y),
-    matka(Matka, X),
-    matka(Matka, Y).
+   mężczyzna(X),
+   ojciec(Ojciec, X), 
+   ojciec(Ojciec, Y),
+   matka(Matka, X),
+   matka(Matka, Y),
+   X \= Y.
+                 
 brat_przyrodni(X, Y) :-
-    mężczyzna(X),
-    (((ojciec(Ojciec, X), ojciec(Ojciec, Y)),(matka(Matka1, X),matka(Matka2,Y), Matka1 \= Matka2)); 
-    ((matka(Matka, X), matka(Matka, Y)),(ojciec(Ojciec1, X),ojciec(Ojciec2,Y), Ojciec1 \= Ojciec2))).
+   mężczyzna(X),
+   ((ojciec(Ojciec, X), ojciec(Ojciec, Y), matka(Matka1, X), matka(Matka2, Y), X \= Y, Matka1 \= Matka2);
+   (matka(Matka, X), matka(Matka, Y), ojciec(Ojciec1, X), ojciec(Ojciec2, Y), X \= Y, Ojciec1 \= Ojciec2)).
+   
 kuzyn(X, Y) :-
     mężczyzna(X),
     rodzic(Rodzic1, X),
-    rodzic(Wspolny, Rodzic1),
-    rodzic(Wspolny, Rodzic2),
-    rodzic(Rodzic2, Y).
+    matka(Wspolny, Rodzic1),
+    matka(Wspolny, Rodzic2),
+    rodzic(Rodzic2, Y),
+    Rodzic1 \= Rodzic2,
+	X \= Y.
 dziadek_od_strony_ojca(X, Y) :-
     ojciec(X, Ojciec),
-    ojciec(Ojciec, Y).
+    ojciec(Ojciec, Y),
+	X \= Y.
 dziadek_od_strony_matki(X, Y) :-
     ojciec(X, Matka),
-    matka(Matka, Y).
+    matka(Matka, Y),
+	X \= Y.
 dziadek(X, Y) :-
     ojciec(X, Rodzic),
-    rodzic(Rodzic, Y).
+    rodzic(Rodzic, Y),
+    X \= Y.
 babcia(X, Y) :-
     matka(X, Rodzic),
-    rodzic(Rodzic, Y).
+    rodzic(Rodzic, Y),
+    X \= Y.
 wnuczka(X, Y) :-
     kobieta(Y),
-    (dziadek(X,Y);babcia(X,Y)).
+    (dziadek(X,Y);babcia(X,Y)),
+	X \= Y.
 przodek_do2pokolenia_wstecz(X, Y) :-
     rodzic(Y, X);
     dziadek(Y, X);
-    babcia(Y, X).
+    babcia(Y, X),
+    X \= Y.
 przodek_do3pokolenia_wstecz(X, Y) :-
     rodzic(Y, X);
     dziadek(Y, X);
     babcia(Y, X);
     (dziadek(Dziadek, X),rodzic(Y,Dziadek));
-    (babcia(Babcia, X),rodzic(Y,Babcia)).
-
-
-    
+    (babcia(Babcia, X),rodzic(Y,Babcia)),
+	X \= Y.
