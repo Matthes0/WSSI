@@ -1,23 +1,28 @@
-% Definicje faktów
+
 drzwi(a,b).
 drzwi(b,c).
 drzwi(b,d).
 drzwi(c,e).
-% Reguła usuwająca element z listy
+
 :- dynamic(got_key/1). 
+
 klucz(d,kluczE).
 otwiera(e,kluczE).
+
 szukaj_wyjscia(Start, KeyRoom, Key, End) :- 
     asserta(got_key(Key)),
     szukaj_wyjscia(Start, KeyRoom, Key, End, [Start]).
+
 szukaj_wyjscia(Start, _, _, Start, _).
+
 szukaj_wyjscia(Start, KeyRoom, Key, End, Visited) :-
     drzwi(Start, NextNode),
-    \+ got_key(NextNode),
     \+ member(NextNode, Visited),
+    \+ got_key(NextNode),
     write('[przechodze_z, '), write(Start), write(', do, '), write(NextNode), write(']'), nl,
-    szukaj_wyjscia(NextNode, KeyRoom, Key, End, [NextNode|Visited])->
+    szukaj_wyjscia(NextNode, KeyRoom, Key, End, [NextNode|Visited]),     
     write('[wychodze_z, '), write(Start), write(']'), nl.
+
 szukaj_wyjscia(Start, Start, Key, End, Visited) :-
     write('[znalazlem_klucz, '), write(Key), write(']'), nl,
     retract(got_key(Key)),
