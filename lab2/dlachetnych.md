@@ -82,9 +82,11 @@
 - ∀x pompejańczyk(x) -> śmierć(x, 79)
 - ∀x ∀t1 ∀t2 (człowiek(x) ∧ urodziny(x, t1) ∧ większe(t2-t1, 150)) -> ¬żyć(x, t2) 
 - ∀x ∀t1 ∀t2 (człowiek(x) ∧ śmierć(x, t1) ∧ większe(t2, t1)) -> ¬żyć(x, t2) 
--  (człowiek(Markus) ∧ urodziny(Markus, 40) ∧ większe(2021-40, 150)) -> ¬żyć(Markus, 2021) 
+-  (człowiek(Markus) ∧ urodziny(Markus, 40) ∧ większe(2021-40, 150)) -> ¬żyć(Markus, 2021)
+-  Markus nie żyje
 ## II  
 - człowiek(Markus)
 - pompejańczyk(Markus)
 - pompejańczyk(Markus) -> śmierć(Markus, 79)
 - (człowiek(Markus) ∧ śmierć(Markus, 79) ∧ większe(2021, 79)) -> ¬żyć(Markus, 2021) 
+- Markus nie żyje
