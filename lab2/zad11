@@ -1,8 +1,19 @@
+mezczyzna(jan).
+mezczyzna(pawel).
+mezczyzna(krzysztof).
+mezczyzna(bartek).
+mezczyzna(piotrek).
+
 lubi(jan, pawel).
 lubi(pawel, krzysztof).
 lubi(pawel, jan).
 lubi(jan, bartek).
 lubi(bartek, jan).
+lubi(jan, ala).
+lubi(ala, ola).
+lubi(ala, jan).
+lubi(piotrek, krystyna).
+lubi(krystyna, piotrek).
 
 przyjazn(X, Y):-
     lubi(X, Y),
@@ -13,7 +24,15 @@ nieprzyjazn(X, Y):-
 niby_przyjazn(X, Y):-
     lubi(X, Y);
     lubi(Y, X).
-
+loves(X, Y):-
+	przyjazn(X, Y),
+    (mezczyzna(X), \+mezczyzna(Y));
+    (mezczyzna(Y), \+mezczyzna(X)).
+true_love(X, Y):-
+    loves(X, Y),
+    \+ (lubi(X, Z), Z \= Y),
+    \+ (lubi(Y, Z), Z \= X).
+    
 /** <examples>
 ?- niby_przyjazn(pawel, krzysztof).
 ?- przyjazn(bartek, jan). 
@@ -21,4 +40,7 @@ niby_przyjazn(X, Y):-
 ?- niby_przyjazn(pawel, krzysztof).
 ?- nieprzyjazn(jan, krzysztof).
 ?- nieprzyjazn(jan, pawel).
+?- true_love(krystyna, piotrek).
+?- loves(jan, ala).
+
 */
